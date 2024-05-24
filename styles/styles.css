@@ -1,0 +1,111 @@
+/* Last edited by: Julia Caro */
+/* Last edited on: May 23, 2024 */
+
+/* html */
+html {
+  font-size: 10px;
+  background: url('/images/background-image.jpg') bottom center;
+  background-size: cover;
+}
+
+/* body and html */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  min-height: 100%;
+  min-width: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  flex: 1;
+}
+
+/* all keys and above paragraph */
+.content {
+  margin-bottom: 55px;
+}
+
+/* sans-serif text on keys and above paragraph */
+.sound, .content p {
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  color: #ffffff;
+  font-weight: bold;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+/* above paragraph */
+.content p {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+/* sans-serif text on keys */
+.sound {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* all of the keys */
+.keys {
+  display: flex;
+  height: fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  background-color: #28282b;
+  box-shadow: 0 0 5px 5px #28282b;
+  border-radius: 30px;
+}
+
+/* the first key */
+.key:first-of-type {
+  margin-left: 0;
+  border-radius: 30px 0 0 30px;
+}
+
+/* the last key */
+.key:last-of-type {
+  margin-right: 0;
+  border-radius: 0 30px 30px 0;
+}
+
+/* individual keys */
+.key {
+  border-radius: .5rem;
+  margin: 0rem .5rem;
+  font-size: 1.5rem;
+  padding: 1rem .5rem;
+  width: 10rem;
+  text-align: center;
+  color: #ffffff;
+  font-weight: bold;
+  background: #28282b;
+}
+
+/* a key when played */
+.playing {
+  transform: scale(1.1);
+  background-color: #ffffff;
+  border-color: #ffffff;
+  box-shadow: 0 0 1rem #ffffff;
+  color: #28282b;
+}
+
+/* sans-serif text on keys when key is played */
+.playing .sound {
+  color: #28282b;
+}
+
+/* transition for each key and when being played */
+.key, .playing .sound {
+  transition: all 0.1s ease;
+}
+
+/* the keyboard letters on each key */
+kbd {
+  display: block;
+  font-size: 4rem;
+  font-family: "Poetsen One", serif;
+}
