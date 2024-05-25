@@ -1,11 +1,11 @@
 <!-- Last edited by: Julia Caro -->
-<!-- Last edited on: May 23, 2024 -->
+<!-- Last edited on: May 24, 2024 -->
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS: Drum Kit</title>
     <link rel="stylesheet" href="/styles/styles.css">
     <!-- the favicon -->
@@ -22,46 +22,51 @@
       <p>Play a song on your keyboard!</p>
       <!-- all of the keys -->
       <div class="keys">
-        <!-- each individual key -->
-        <div data-key="65" class="key">
-          <!-- keyboard letter -->
-          <kbd>A</kbd>
-          <!-- key sans-serif text -->
-          <span class="sound">clap</span>
+        <div class="row-one">
+          <!-- each individual key -->
+          <div data-key="65" class="key">
+            <!-- keyboard letter -->
+            <kbd>A</kbd>
+            <!-- key sans-serif text -->
+            <span class="sound">clap</span>
+          </div>
+          <div data-key="83" class="key">
+            <kbd>S</kbd>
+            <span class="sound">hihat</span>
+          </div>
+          <div data-key="68" class="key">
+            <kbd>D</kbd>
+            <span class="sound">kick</span>
+          </div>
+          <div data-key="70" class="key">
+            <kbd>F</kbd>
+            <span class="sound">bark</span>
+          </div>
+          <div data-key="71" class="key">
+            <kbd>G</kbd>
+            <span class="sound">boom</span>
+          </div>
         </div>
-        <div data-key="83" class="key">
-          <kbd>S</kbd>
-          <span class="sound">hihat</span>
-        </div>
-        <div data-key="68" class="key">
-          <kbd>D</kbd>
-          <span class="sound">kick</span>
-        </div>
-        <div data-key="70" class="key">
-          <kbd>F</kbd>
-          <span class="sound">openhat</span>
-        </div>
-        <div data-key="71" class="key">
-          <kbd>G</kbd>
-          <span class="sound">boom</span>
-        </div>
-        <div data-key="72" class="key">
-          <kbd>H</kbd>
-          <span class="sound">ride</span>
-        </div>
-        <div data-key="74" class="key">
-          <kbd>J</kbd>
-          <span class="sound">snare</span>
-        </div>
-        <div data-key="75" class="key">
-          <kbd>K</kbd>
-          <span class="sound">tom</span>
-        </div>
-        <div data-key="76" class="key">
-          <kbd>L</kbd>
-          <span class="sound">tink</span>
+        <div class="row-two">
+          <div data-key="72" class="key">
+            <kbd>H</kbd>
+            <span class="sound">ride</span>
+          </div>
+          <div data-key="74" class="key">
+            <kbd>J</kbd>
+            <span class="sound">snare</span>
+          </div>
+          <div data-key="75" class="key">
+            <kbd>K</kbd>
+            <span class="sound">tom</span>
+          </div>
+          <div data-key="76" class="key">
+            <kbd>L</kbd>
+            <span class="sound">tink</span>
+          </div>
         </div>
       </div>
+      <input type="text" name="field" aria-label="Click to type notes" placeholder="Click to type notes ..." onkeydown="return /[asdfghjkl]/i.test(event.key)">
     </div>
 
     <!-- each key's corresponding audio -->

@@ -1,11 +1,13 @@
 /* Last edited by: Julia Caro */
-/* Last edited on: May 23, 2024 */
+/* Last edited on: May 24, 2024 */
 
 /* html */
 html {
   font-size: 10px;
   background: url('/images/background-image.jpg') bottom center;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
 }
 
 /* body and html */
@@ -54,19 +56,34 @@ body, html {
   height: fit-content;
   width: fit-content;
   margin: 0 auto;
+}
+
+/* both rows of keys */
+.row-one, .row-two {
   background-color: #28282b;
   box-shadow: 0 0 5px 5px #28282b;
   border-radius: 30px;
+  display: flex;
+  flex-direction: row;
 }
 
-/* the first key */
-.key:first-of-type {
+/* the first row of keys */
+.row-one {
+  border-radius: 30px 0 0 30px;
+}
+
+/* the first key in first row */
+.row-one .key:first-of-type {
   margin-left: 0;
   border-radius: 30px 0 0 30px;
 }
 
-/* the last key */
-.key:last-of-type {
+.row-two {
+  border-radius: 0 30px 30px 0;
+}
+
+/* the last key in second row */
+.row-two .key:last-of-type {
   margin-right: 0;
   border-radius: 0 30px 30px 0;
 }
@@ -108,4 +125,209 @@ kbd {
   display: block;
   font-size: 4rem;
   font-family: "Poetsen One", serif;
+}
+
+input {
+  display: none;
+}
+
+/* tablet view if screen is at most 1100 pixels wide and at least 701 pixels wide */
+@media only screen and (max-width: 1100px) and (min-width: 701px) {
+  /* html */
+  html {
+    background-position: 74% 76%;
+    background-size: inherit;
+  }
+
+  /* all of the content */
+  .content {
+    scale: 140%;
+    padding-bottom: 40px;
+  }
+
+  /* above paragraph */
+  .content p {
+    font-size: 1.75rem;
+  }
+
+  /* all keys */
+  .keys {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  /* individual keys */
+  .key {
+    padding: 0.2rem .1rem;
+    width: 5.5rem;
+  }
+
+  /* the first row of keys */
+  .row-one {
+    margin: auto 0;
+    border-radius: 30px;
+  }
+
+  /* the first key in the first row of keys */
+  .row-one .key:first-of-type {
+    padding-left: 10px;
+  }
+
+  /* the last key in the first row of keys */
+  .row-one .key:last-of-type {
+    margin-right: 0;
+    padding-right: 10px;
+    border-radius: 0 30px 30px 0;
+  }
+
+  /* the second row of keys */
+  .row-two {
+    margin: 15px auto 20px auto;
+    align-self: center;
+    border-radius: 30px 30px;
+    box-shadow: 0 0 5px 5px #28282b;
+  }
+
+  /* the first key in the second row of keys */
+  .row-two .key:first-of-type {
+  margin-left: 0;
+  padding-left: 5px;
+  border-radius: 30px 0 0 30px;
+  }
+
+  /* the last key in the second row of keys */
+  .row-two .key:last-of-type {
+    padding-right: 5px;
+    margin-right: 0;
+    border-radius: 0 30px 30px 0;
+  }
+
+  /* the keyboard letters on each key */
+  kbd {
+    font-size: 3.3rem;
+  }
+
+  /* the input */
+  input {
+    display: block;
+    padding: 5px 10px;
+    margin: 8px auto;
+    border: 3px solid #fff;
+    border-radius: 30px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+  }
+
+  /* the input on focus */
+  input:focus {
+    border: 3px solid #a464d9;
+  }
+
+  /* sans-serif text on keys */
+  .sound {
+    position: relative;
+    top: -2px;
+  }
+}
+
+/* mobile view if screen is at most 700 pixels wide */
+@media only screen and (max-width: 700px) {
+  /* html */
+  html
+  {
+    background-position: 74% 76%;
+    background-size: inherit;
+  }
+
+  /* all keys and above paragraph */
+  .content
+  {
+    margin-bottom: 35px;
+  }
+
+  /* above paragraph */
+  .content p {
+    font-size: 1.75rem;
+  }
+
+  /* all keys */
+  .keys {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  /* individual keys */
+  .key {
+    padding: 0.2rem .1rem;
+    width: 5.5rem;
+  }
+
+  /* the first row of keys */
+  .row-one {
+    margin: auto 0;
+    border-radius: 30px;
+  }
+
+  /* the first key in the first row of keys */
+  .row-one .key:first-of-type {
+    padding-left: 10px;
+  }
+
+  /* the last key in the first row of keys */
+  .row-one .key:last-of-type {
+    margin-right: 0;
+    padding-right: 10px;
+    border-radius: 0 30px 30px 0;
+  }
+
+  /* the second row of keys */
+  .row-two {
+    margin: 15px auto 20px auto;
+    align-self: center;
+    border-radius: 30px 30px;
+    box-shadow: 0 0 5px 5px #28282b;
+  }
+
+  /* the first key in the second row of keys */
+  .row-two .key:first-of-type {
+    margin-left: 0;
+    padding-left: 5px;
+    border-radius: 30px 0 0 30px;
+  }
+
+  /* the last key in the second row of keys */
+  .row-two .key:last-of-type {
+    padding-right: 5px;
+    margin-right: 0;
+    border-radius: 0 30px 30px 0;
+  }
+
+  /* the keyboard letters on each key */
+  kbd {
+    font-size: 3.3rem;
+  }
+
+  /* the input */
+  input {
+    display: block;
+    padding: 5px 10px;
+    margin: 8px auto;
+    border: 3px solid #fff;
+    border-radius: 30px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+  }
+
+  /* the input on focus */
+  input:focus {
+    border: 3px solid #a464d9;
+  }
+
+  /* sans-serif text on keys */
+  .sound {
+    position: relative;
+    top: -2px;
+  }
 }
